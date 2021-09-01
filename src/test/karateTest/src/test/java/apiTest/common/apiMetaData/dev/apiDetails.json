@@ -1,0 +1,22 @@
+{
+  "changePasswordAPI" : {
+    "baseUrl" : "http://localhost:8081",
+    "urls" : {
+      "get" : "http://localhost:8081/v1/updatePassword/users",
+      "put" : "http://localhost:8081/v1/updatePassword/users"
+    },
+    "invalidUrls" : {
+      "put" : "http://localhost:8081/v1/invalid/updatePassword"
+    },
+    "endpoints" : {
+      "get" : "/users",
+      "put" : "/users"
+    },
+    "params" : {
+
+    },
+    "requestHeaders" : {
+
+    }
+  }
+}

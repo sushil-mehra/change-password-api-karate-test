@@ -225,8 +225,8 @@ In order to run all the automated tests at once please use below :
 mvn clean test -Dkarate.options="--tags @MyTestTag" -Dkarate.env=dev -Dkarate.threads=1
 ```
 > *Note:-*
-            1. Replace `@MyTestTag` with a tag from the above list (e.g. `@CP_Regression`).   
-            2. **karate.env** & **karate.threads** arguments have a default value set. Only required when we need to override the default values.
+>   1. Replace `@MyTestTag` with a tag from the above list (e.g. `@CP_Regression`).             
+>   2. **karate.env** & **karate.threads** arguments have a default value set. Only required when we need to override the default values.
 
 #### Tags available to run specific tests for functional tests
 To run a specific test annotation from **@CP_TC01** to **@CP_TC70** can be used. However, in order to run any specific test as per the group defined previously. The below list of tags can be used.
@@ -243,7 +243,9 @@ To run a specific test annotation from **@CP_TC01** to **@CP_TC70** can be used.
     * Password Length check 
         => @CP_LengthCheck    
     
+    
 > *Note:-* Refer to the feature files at `apiTest\features` under karateTest for more details on the available tags.
+
 
 # Test Report
 Post successful execution of all the Karate Tests. A detailed cucumber report will generate at `src\test\karateTest\target\cucumber-html-reports`. Then open `overview-features.html` from cucumber-html-reports in any browser (refer to the `testartifacts` for sample report) to view the test-result.

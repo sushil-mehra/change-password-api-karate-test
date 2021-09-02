@@ -159,11 +159,15 @@ A basic response time(<500ms) check has been covered for *changePassword API* in
 ## 1. Building API
 
 **1.1 Clone the application**
+
 ```bash
-https://github.com/sushil-mehra/change-password-api-karate-test.git
+git clone https://github.com/sushil-mehra/change-password-api-karate-test.git
 ```
 
 **1.2.1 Build and run the app using maven**
+
+Packge the code into Jar file.
+
 ```bash
 mvn package
 ```
@@ -171,7 +175,7 @@ After the jar file is created under ``target/change-password-api-karate-tests-1.
 ```bash
 java -jar target/change-password-api-karate-tests-1.0.0-SNAPSHOT.jar
 ```
-Alternatively, you can run the app without packaging it using -
+Alternatively, you can run the app without packaging it
 
 ```bash
 mvn spring-boot:run
@@ -179,7 +183,7 @@ mvn spring-boot:run
 
 **1.2.2 Run the app using docker**
 
-After packaging the JAR file. Go to the directory where the `Dockerfile` is located. Then use below command.
+Once JAR file is created. Go to the directory where the `Dockerfile` is located. Then use below command.
 ```bash
 docker build -t changeapi
 ```
@@ -204,14 +208,15 @@ The request needs below request body to work.
 ```
 
 ## 2. Running Automation Karate Tests
-In order to run all the automated tests at one please use below :
+
+In order to run all the automated tests at once please use below :
 
 ```bash
 mvn clean test -Dkarate.options="--tags @MyTestTag" -Dkarate.env=dev -Dkarate.threads=1
 ```
 *Note:-*
 1. Replace `@MyTestTag` with a tag from the above list (e.g. `@CP_Regression`). 
-2. **karate.env** & **karate.threads** arguments have a default value set. It is only required when we need to override the default values.
+2. **karate.env** & **karate.threads** arguments have a default value set. Only required when we need to override the default values.
 
 #### Tags available to run specific tests for functional tests
 To run a specific test annotation from @CP1 to @CP70 can be used. However, in order to run any specific test as per the group defined previously. The below list of tags can be used.

@@ -58,7 +58,7 @@ A total of 24 unit tests have been created. 22 unit tests covers the Password co
 | checkDiffFalse()						| repeatedCharCount_charTrue()			| constraintCheck_ExtraSpecialChar_False()	| number50EqualFalse()	|
 | constraintCheck_Length_True()			| repeatedCharCount_charFalse()			| constraintCheck_SpecialChar_False()		| trimListTrue()		|
 | constraintCheck_Length_False()		| repeatedCharCount_SpecialTrue()		| constraintCheck_UpperAndLower()			| contextLoads()		|
-| constraintCheck_RepeatedChar_True()	| repeatedCharCount_SpecialFalse()		| constraintCheck_NoUpperAllLower()			| testUpdatePut()		|
+| constraintCheck_RepeatedChar_True()	| repeatedCharCount_SpecialFalse()		| constraintCheck_NoUpperAllLower()			| testPutCall()		    |
 
 From the project root, run the following to execute all above unit tests
 
@@ -82,8 +82,8 @@ All functional tests covered are given below
 
 ### Test case table
 
-|S.No.|Category|High Level	|Description | Test Case ID|
----| ------ | ---------- | ----------- | :-----------: |
+S.No|Category|High Level|Description | Test Case ID|
+--| ---- | ------------ | -------------- | ----------- 
 | 1|Happy Path|Password meets all constraints|New Password meets all the given constraints|ChangePass_TC01|
 |2|Invalid Request|Input Password field is empty|Old Password empty|ChangePass_TC02|
 |  |  |  |New Password empty|ChangePass_TC03|
@@ -155,9 +155,11 @@ All functional tests covered are given below
 |11|DB check|DB update|Check Password has been updated successfully|ChangePass_TC64|
 |  |  |No DB update|Check Password is not updated in case of any error|ChangePass_TC65|
 
-**Note:** 
-1. Database validation tests created are OOS(out of scope), as we have mocked the user objects within the API (see UserController.java). Otherwise, if the database connectivity were present then the same test cases (ChangePass_TC64 & ChangePass_TC65) stands valid & to be covered under functional testing.
-2. Please refer to the location - `testartifacts` it contains test data excel file and a report file.
+> **Note:** 
+    1. Database validation tests created are OOS(out of scope), as we have mocked the user objects within the API (see UserController.java). Otherwise, if the database             connectivity were present then the same test cases (ChangePass_TC64 & ChangePass_TC65) stands valid & to be covered under functional testing.
+
+Please refer to the location - `testartifacts` it contains test data excel file and a test report file.
+
 
 ## Non Functional Test
 A basic response time(<500ms) check has been covered for *changePassword API* in all of the test cases that will confirm whether we are getting the response within the expected time. And it is easily configurable from (karate-config.js) whenever we need to test response time for a different threshold.
@@ -208,7 +210,7 @@ The app defines one endpoint only to perform the update operation for any existi
     PUT /v1/updatePassword/users/{userId}
 
 The request needs below request body to work.
-```javascript
+```js
 {
   "oldPwd" : "oldPassword",
   "newPwd" : "newPassword"
@@ -222,9 +224,9 @@ In order to run all the automated tests at once please use below :
 ```bash
 mvn clean test -Dkarate.options="--tags @MyTestTag" -Dkarate.env=dev -Dkarate.threads=1
 ```
-*Note:-*
-1. Replace `@MyTestTag` with a tag from the above list (e.g. `@CP_Regression`). 
-2. **karate.env** & **karate.threads** arguments have a default value set. Only required when we need to override the default values.
+> *Note:-*
+            1. Replace `@MyTestTag` with a tag from the above list (e.g. `@CP_Regression`). 
+            2. **karate.env** & **karate.threads** arguments have a default value set. Only required when we need to override the default values.
 
 #### Tags available to run specific tests for functional tests
 To run a specific test annotation from @CP1 to @CP70 can be used. However, in order to run any specific test as per the group defined previously. The below list of tags can be used.

@@ -17,7 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <maven.compiler.version>3.6.0</maven.compiler.version>
-        <maven.surefire.version>2.22.1</maven.surefire.version>
+        <maven.surefire.version>2.22.2</maven.surefire.version>
         <karate.version>0.9.6</karate.version>
     </properties>
 
@@ -77,7 +77,7 @@
                         <argLine>-Dfile.encoding=UTF-8</argLine>
                         <karate.options>--plugin junit:target/surefire-reports/cucumber-junit.xml</karate.options>
                         <karate.test.header>Change Password API Test</karate.test.header>
-                        <karate.env></karate.env>
+                        <karate.env/>
                         <karate.threads>1</karate.threads>
                     </systemProperties>
                 </configuration>

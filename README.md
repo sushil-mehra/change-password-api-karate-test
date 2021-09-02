@@ -178,6 +178,7 @@ mvn spring-boot:run
 ```
 
 **1.2.2 Run the app using docker**
+
 After packaging the JAR file. Go to the directory where the `Dockerfile` is located. Then use below command.
 ```bash
 docker build -t changeapi

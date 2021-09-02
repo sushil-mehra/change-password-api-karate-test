@@ -250,6 +250,6 @@ Refer to the `testartifacts` where complete test data & sample test report has b
 
 
 ### Reference
-1. Spring boot - https://spring.io/guides/tutorials/rest/
-2. Karate DSL - https://github.com/intuit/karate
-3. Cucumber Report - https://github.com/damianszczepanik/cucumber-reporting
+1. Spring boot - https://spring.io/guides/tutorials/rest/ | https://stackabuse.com/build-a-spring-boot-rest-api-with-java-full-guide/
+3. Karate DSL - https://github.com/intuit/karate
+4. Cucumber Report - https://github.com/damianszczepanik/cucumber-reporting

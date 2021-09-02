@@ -158,7 +158,7 @@ S.No|Category|High Level|Description | Test Case ID|
 > **Note:** 
     1. Database validation tests created are OOS(out of scope), as we have mocked the user objects within the API (see UserController.java). Otherwise, if the database             connectivity were present then the same test cases (ChangePass_TC64 & ChangePass_TC65) stands valid & to be covered under functional testing.
 
-Please refer to the location - `testartifacts` it contains test data excel file and a test report file.
+Please refer to - `testartifacts` it contains test data excel file and a test report file.
 
 
 ## Non Functional Test
@@ -225,11 +225,11 @@ In order to run all the automated tests at once please use below :
 mvn clean test -Dkarate.options="--tags @MyTestTag" -Dkarate.env=dev -Dkarate.threads=1
 ```
 > *Note:-*
-            1. Replace `@MyTestTag` with a tag from the above list (e.g. `@CP_Regression`). 
+            1. Replace `@MyTestTag` with a tag from the above list (e.g. `@CP_Regression`).   
             2. **karate.env** & **karate.threads** arguments have a default value set. Only required when we need to override the default values.
 
 #### Tags available to run specific tests for functional tests
-To run a specific test annotation from @CP1 to @CP70 can be used. However, in order to run any specific test as per the group defined previously. The below list of tags can be used.
+To run a specific test annotation from **@CP_TC01** to **@CP_TC70** can be used. However, in order to run any specific test as per the group defined previously. The below list of tags can be used.
 
     * Regression                * Invalid Request check             * Special Char check
         => @CP_Regression           => @CP_InvalidUrl                   => @CP_SpCharCheck
@@ -243,7 +243,7 @@ To run a specific test annotation from @CP1 to @CP70 can be used. However, in or
     * Password Length check 
         => @CP_LengthCheck    
     
-*Note:-* Refer to the feature files at `apiTest\features` under karateTest for more details on the available tags.
+> *Note:-* Refer to the feature files at `apiTest\features` under karateTest for more details on the available tags.
 
 # Test Report
 Post successful execution of all the Karate Tests. A detailed cucumber report will generate at `src\test\karateTest\target\cucumber-html-reports`. Then open `overview-features.html` from cucumber-html-reports in any browser (refer to the `testartifacts` for sample report) to view the test-result.

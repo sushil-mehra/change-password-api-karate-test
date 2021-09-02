@@ -50,6 +50,7 @@ To verify the change password API, below tests have been covered under this proj
 ## Unit Test
 A total of 24 unit tests have been created. 22 unit tests covers the Password constraints business logic check, and 2 unit tests perform sanity check on the application initialization and PUT method.
 
+
 |                                       |                                       |                                           |                       |
 | --------------------------------------|---------------------------------------|-------------------------------------------|-----------------------|
 | changePasswordTest()                  | constraintCheck_NoLowerAllUpperChar() | constraintCheck_RepeatedChar_False()		| number50True()		|
@@ -58,6 +59,13 @@ A total of 24 unit tests have been created. 22 unit tests covers the Password co
 | constraintCheck_Length_True()			| repeatedCharCount_charFalse()			| constraintCheck_SpecialChar_False()		| trimListTrue()		|
 | constraintCheck_Length_False()		| repeatedCharCount_SpecialTrue()		| constraintCheck_UpperAndLower()			| contextLoads()		|
 | constraintCheck_RepeatedChar_True()	| repeatedCharCount_SpecialFalse()		| constraintCheck_NoUpperAllLower()			| testUpdatePut()		|
+
+From the project root, run the following to execute all above unit tests
+
+```bash
+mvn test
+```
+
 
 ## Functional Test
 All functional tests covered are given below

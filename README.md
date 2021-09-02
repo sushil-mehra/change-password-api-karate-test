@@ -148,11 +148,11 @@ All functional tests covered are given below
 |  |  |No DB update|Check Password is not updated in case of any error|ChangePass_TC65|
 
 **Note:** 
-1. Database validation tests created are OOS(out of scope), as we have mocked the user objects within the API (see later section). Otherwise, if the database connectivity were present then the same test cases (ChangePass_TC64 & ChangePass_TC65) stands valid & to be covered under functional testing.
+1. Database validation tests created are OOS(out of scope), as we have mocked the user objects within the API (see UserController.java). Otherwise, if the database connectivity were present then the same test cases (ChangePass_TC64 & ChangePass_TC65) stands valid & to be covered under functional testing.
 2. Please refer to the location - `testartifacts` it contains test data excel file and a report file.
 
 ## Non Functional Test
-A basic response time(<500ms) check has been covered for *changePassword API* in all of the test cases that will confirm whether we are getting the response within the expected time. And it is easily configurable in case, we need to test it for a different threshold.
+A basic response time(<500ms) check has been covered for *changePassword API* in all of the test cases that will confirm whether we are getting the response within the expected time. And it is easily configurable from (karate-config.js) whenever we need to test response time for a different threshold.
 
 # Setup Steps - Build API + Test Execution
 
@@ -163,7 +163,7 @@ A basic response time(<500ms) check has been covered for *changePassword API* in
 https://github.com/sushil-mehra/change-password-api-karate-test.git
 ```
 
-**1.1.1 Build and run the app using maven**
+**1.2.1 Build and run the app using maven**
 ```bash
 mvn package
 ```
@@ -177,7 +177,7 @@ Alternatively, you can run the app without packaging it using -
 mvn spring-boot:run
 ```
 
-**1.1.2 Run the app using docker**
+**1.2.2 Run the app using docker**
 After packaging the JAR file. Go to the directory where the `Dockerfile` is located. Then use below command.
 ```bash
 docker build -t changeapi
@@ -233,3 +233,9 @@ To run a specific test annotation from @CP1 to @CP70 can be used. However, in or
 Post successful execution of all the Karate Tests. A detailed cucumber report will generate at `src\test\karateTest\target\cucumber-html-reports`. Then open `overview-features.html` from cucumber-html-reports in any browser (refer to the `testartifacts` for sample report) to view the test-result.
 
 Refer to the `testartifacts` where complete test data & sample test report has been added.
+
+
+### Reference
+1. Spring boot - https://spring.io/guides/tutorials/rest/
+2. Karate DSL - https://github.com/intuit/karate
+3. Cucumber Report - https://github.com/damianszczepanik/cucumber-reporting

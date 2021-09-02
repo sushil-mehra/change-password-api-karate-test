@@ -250,7 +250,9 @@ To run a specific test annotation from **@CP_TC01** to **@CP_TC70** can be used.
 # Test Report
 Post successful execution of all the Karate Tests. A detailed cucumber report will generate at `src\test\karateTest\target\cucumber-html-reports`. Then open `overview-features.html` from cucumber-html-reports in any browser (refer to the `testartifacts` for sample report) to view the test-result.
 
-Refer to the `testartifacts` where complete test data & sample test report has been added.
+Refer to the test data in `testartifacts`. A sample karate-execution report has been added below.
+
+![](testartifacts/report-run.jpg)
 
 
 ### Reference

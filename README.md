@@ -195,7 +195,7 @@ mvn spring-boot:run
 
 Once JAR file is created. Go to the directory where the `Dockerfile` is located. Then use below command.
 ```bash
-docker build -t changeapi
+docker build -t changeapi .
 ```
 the `changeapi` refers to the image name and can be given any value.
 
